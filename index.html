@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salwa's Taartenshop</title>
+    <link href="./css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/pid6awg.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Customise your own cake!
+        </h1>
+    </header>
+    <main>
+        <div class="left">
+            <div class="images">
+                <img src="./images/taart-empty.png" alt="Un-customised cake" class="image">
+                <img src="./images/buttercream.png" alt="buttercream-cake" class="image-x" id="buttercream">
+                <img src="./images/chococream.png" alt="chococream-cake" class="image-x" id="chococream">
+                <img src="./images/jam.png" alt="jam-cake" class="image-x" id="jam">
+                <img src="./images/chocotop.png" alt="" class="image-x" id="chocotop">
+                <img src="./images/buttertop.png" alt="" class="image-x" id="buttertop">
+                <img src="./images/nakedChoco.png" alt="" class="image-x" id="nakedchoco">
+                <img src="./images/nakedStraw.png" alt="" class="image-x" id="nakedstraw">
+                <img src="./images/nakedVanilla.png" alt="" class="image-x" id="nakedvanilla">
+
+                <img src="./images/top1.png" alt="" class="image-x" id="tufts">
+                <img src="./images/top2.png" alt="" class="image-x" id="sprinkles">
+                <img src="./images/top3.png" alt="" class="image-x" id="pearls">
+            </div>
+
+            <div class="tekst">
+                <p id="tekst">Select your first ingredient..</p>
+            </div>
+
+            <div class="total">
+                <p>Total:</p>
+                <div class="totalsum"><p id="totalsum"></p></div>
+                <button id="buyBtn">Buy</button>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="mymodal">
+            <div class="modalcontent">
+                <h2>
+                    What is your name?
+                </h2>
+                <input type="text" id="name" name="name" placeholder="Your name">
+                <audio id="buyAudio" src="./audio/kaching.mp3"></audio> <!-- Bron: https://www.youtube.com/watch?v=vBYJdZlpBT4 -->
+                <button id="nameBtn" onClick="buyAudio()">Buy</button>
+            </div>
+        </div>
+
+        <div class="newmodal" id="scndmodal">
+            <div class="modalcontent">
+                <h2>
+                    Thank you for your purchase, <span id="nameSpan"> ... </span>!
+                </h2>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="layers">
+                <p>Pick a flavour</p>
+                <div class="ingredients">
+                    <input type="radio" name="lay1" value="vanilla" class="radio" id="flavor1">
+                    <label for="flavor1" class="label">Vanilla</label>
+                    <input type="radio" name="lay1" value="chocolate" class="radio" id="flavor2">
+                    <label for="flavor2" class="label">Chocolate</label>
+                    <input type="radio" name="lay1" value="strawberry" class="radio" id="flavor3">
+                    <label for="flavor3" class="label">Strawberry</label>
+                </div>
+            </div>
+
+            <div class="layers">
+                <p>Pick a cream</p>
+                <div class="ingredients">
+                    <input type="radio" name="lay2" value="buttercream" class="radio" id="cream1">
+                    <label for="cream1" class="label">Buttercream</label>
+                    <input type="radio" name="lay2" value="chocolate" class="radio" id="cream2">
+                    <label for="cream2" class="label">Chocolate</label>
+                    <input type="radio" name="lay2" value="jam" class="radio" id="cream3">
+                    <label for="cream3" class="label">Strawberry Jam</label>
+                </div>
+            </div>
+
+            <div class="layers">
+                <p>Choose a top layer</p>
+                <div class="ingredients">
+                    <input type="radio" name="lay5" value="chocolate" class="radio" id="top1">
+                    <label for="top1" class="label">Chocolate</label>
+                    <input type="radio" name="lay5" value="cream" class="radio" id="top2">
+                    <label for="top2" class="label">Buttercream</label>
+                    <input type="radio" name="lay5" value="naked" class="radio" id="top3">
+                    <label for="top3" class="label">Naked</label>
+                </div>
+            </div>
+
+            <div class="layers">
+                <p>Choose a topping</p>
+                <div class="ingredients">
+                    <input type="radio" name="lay4" value="tufts" class="radio" id="topping1">
+                    <label for="topping1" class="label">Whipped Cream</label>
+                    <input type="radio" name="lay4" value="sprinkles" class="radio" id="topping2">
+                    <label for="topping2" class="label">Sprinkles</label>
+                    <input type="radio" name="lay4" value="pearls" class="radio" id="topping3">
+                    <label for="topping3" class="label">Pearls</label>
+                </div>
+            </div>           
+        </div>
+    </main>
+    <script src="js/taartenshop.js"></script>
+</body>
+</html>
